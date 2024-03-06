@@ -1,2 +1,2 @@
 # kotlin_algorithm
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+This is my kotlin study archiving repository
