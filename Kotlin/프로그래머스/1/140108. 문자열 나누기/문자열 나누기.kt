@@ -8,7 +8,14 @@
 2-1. 같다면 isX, isNotX를 초기화한다.
      다음 인덱스부터 시작하도록 i++한다.
      strX은 i+1번째 인덱스 값으로 초기화한다.
-        
+
+3. s가 한 문자일 경우에는 1로 리턴한다.
+
+        b a n a n a
+   isX  1   1   1
+isNotX    1   1   1
+answer    1   2   3
+
 */
 class Solution {
     fun solution(s: String): Int {
