@@ -8,8 +8,7 @@
 class Solution {
     fun solution(keymap: Array<String>, targets: Array<String>): IntArray {
         var answer: IntArray = intArrayOf()
-        
-        
+              
         for (i in 0 until targets.size) {
             var pushCount = 0
             for (j in 0 until targets[i].length) {
@@ -19,10 +18,7 @@ class Solution {
                         compareCount.add(keymap[k].indexOf(targets[i][j]))
                     }
                 }
-                if (compareCount.size == 1) {
-                    pushCount += compareCount[0] + 1
-                    compareCount.clear()
-                } else if (compareCount.size > 1) {
+                if (compareCount.size >= 1) {
                     pushCount += compareCount.minOrNull()!! + 1
                     compareCount.clear()
                 } else {
@@ -32,8 +28,7 @@ class Solution {
             }
             answer += pushCount
         }
-        
-        
+                
         return answer
     }
 }
