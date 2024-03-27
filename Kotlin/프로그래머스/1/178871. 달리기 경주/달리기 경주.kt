@@ -1,21 +1,20 @@
 class Solution {
     fun solution(players: Array<String>, callings: Array<String>): Array<String> {
-        // 이름을 키로하고 순서를 값으로하는 맵 생성
+        
         val playerMap = mutableMapOf<String, Int>()
-        players.forEachIndexed { index, player -> playerMap[player] = index }
-
-        // 불리는 순서대로 플레이어 이동
-        callings.forEach { calling ->
-            val currentIndex = playerMap[calling]!!
-            if (currentIndex > 0) { // 맨 앞 플레이어는 이동할 필요 없음
-                val prevPlayer = players[currentIndex - 1]
-                playerMap[prevPlayer] = currentIndex // 앞의 플레이어를 현재 위치로 이동
-                playerMap[calling] = currentIndex - 1 // 현재 플레이어를 앞으로 이동
-                players[currentIndex] = prevPlayer // 배열에서도 위치 변경
-                players[currentIndex - 1] = calling // 배열에서도 위치 변경
+        players.forEachIndexed { index, value -> playerMap[value] = index}
+        
+        callings.forEach { call ->
+            val idx = playerMap[call]!! //현재 인덱스
+            if (idx > 0) {
+                val prevPlayer = players[idx - 1] //앞 선수의 이름
+                playerMap[prevPlayer] = idx //앞 선수의 순번을 불린 선수 것으로 변경
+                players[idx] = prevPlayer //배열상 앞 선수의 위치를 불린 선수 위치로 변경
+                
+                playerMap[call] = idx - 1 //불린 선수의 순번에서 1 빼기
+                players[idx - 1] = call //배열상 불린 선수의 위치를 한칸 앞으로 변경
             }
         }
-        
         return players
     }
 }
