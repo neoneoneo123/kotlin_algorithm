@@ -1,10 +1,10 @@
 # [level 1] 공원 산책 - 172928 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/172928) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/172928#) 
 
 ### 성능 요약
 
-메모리: 63.9 MB, 시간: 31.17 ms
+메모리: 61.3 MB, 시간: 11.00 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 28일 11:06:59
+2024년 03월 28일 11:11:45
 
 ### 문제 설명
 
