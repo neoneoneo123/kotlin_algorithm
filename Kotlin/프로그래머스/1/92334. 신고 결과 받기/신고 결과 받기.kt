@@ -1,7 +1,7 @@
 class Solution {
     fun solution(id_list: Array<String>, report: Array<String>, k: Int): IntArray {
-        val reportCount = mutableMapOf<String, Int>().withDefault { 0 } // id별 신고당한 횟수 누적
-        val suspendedCount = mutableMapOf<String, Int>().withDefault { 0 } // id별 정지 시킨 이용자 수 누적
+        val reportCount = mutableMapOf<String, Int>().withDefault { 0 }
+        val suspendedCount = mutableMapOf<String, Int>().withDefault { 0 }
         
         var repoToSet = report.toList().distinct()
         
